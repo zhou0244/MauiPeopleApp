@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MauiPeopleApp.Views.PersonDetailPage"
-             Title="Person Details">
-    <StackLayout Padding="20" Spacing="10">
-        <Image Source="{Binding Person.avatar}" WidthRequest="120" HeightRequest="120" Aspect="AspectFill" HorizontalOptions="Center" />
-        <Label Text="{Binding Person.fulName}" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center"/>
-        <Label Text="{Binding Person.email}" FontSize="16" HorizontalOptions="Center"/>
-    </StackLayout>
+             x:Class="MauiPeopleApp.Views.PersonDetailPage">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20" Spacing="10">
+            <Image Source="{Binding Person.Avatar}" WidthRequest="120" HeightRequest="120" Aspect="AspectFill" HorizontalOptions="Center" />
+            <Label Text="{Binding Person.FullName}" FontAttributes="Bold" FontSize="24" HorizontalOptions="Center"/>
+            <Label Text="{Binding Person.Email}" FontSize="16" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -3,5 +3,6 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:MauiPeopleApp.Views"
        x:Class="MauiPeopleApp.AppShell">
-    <ShellContent Title="People" ContentTemplate="{DataTemplate views:PersonDetailPage}" />
+    <ShellContent Title="People" ContentTemplate="{DataTemplate views:LoginPage}" />
+    <ShellContent Title="People" ContentTemplate="{DataTemplate views:PersonListPage}" />
 </Shell>

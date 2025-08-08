@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Windows.Input;
 using MauiPeopleApp.Models;
 using MauiPeopleApp.Services;
-using MauiPeopleApp.Views;
 
 namespace MauiPeopleApp.ViewModels;
 

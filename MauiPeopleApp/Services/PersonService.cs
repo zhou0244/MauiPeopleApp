@@ -9,12 +9,14 @@ public class PersonService
 
     public PersonService()
     {
-        _httpClient = new Http();
+        _httpClient = new HttpClient();
     }
 
     public async Task<List<Person>> GetPeopleAsync()
     {
-        var response = await _httpClient.GetFromJsonAsync<ApiResponse>("https://reqres.in/api/users");
+        Console.WriteLine("Fetching people...");
+        var response = await _httpClient.GetFromJsonAsync<ApiResponse>("https://reqres.in/api/users?api_key=reqres-free-v1");
+        Console.WriteLine($"API Response received. Data count: {response?.Data?.Count ?? 0}");
         return response?.Data ?? new List<Person>();
     }
 

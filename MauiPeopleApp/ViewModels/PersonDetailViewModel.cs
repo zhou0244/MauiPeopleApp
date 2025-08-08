@@ -2,7 +2,7 @@ using MauiPeopleApp.Models;
 
 namespace MauiPeopleApp.ViewModels;
 
-public class PersonDetailViewModel
+public class PersonDetailViewModel: BaseViewModel
 {
     public Person Person { get; }
 
@@ -10,4 +10,6 @@ public class PersonDetailViewModel
     {
         Person = person;
     }
+    
+    public PersonDetailViewModel() {}
 }
