@@ -1,6 +1,7 @@
 using Plugin.Fingerprint;
 using Plugin.Fingerprint.Abstractions;
 using CommunityToolkit.Mvvm.Input;
+using MauiPeopleApp.Views;
 
 namespace MauiPeopleApp.ViewModels;
 
@@ -16,7 +17,7 @@ public partial class LoginViewModel: BaseViewModel
         try
         {
             isAvailable = await CrossFingerprint.Current.IsAvailableAsync(allowAlternativeAuthentication:true);
-            // await App.Current.MainPage.DisplayAlert("Info", $"Biometric available: {isAvailable}", "OK");
+            await App.Current.MainPage.DisplayAlert("Info", $"Biometric available: {isAvailable}", "OK");
         }
         catch (Exception ex)
         {
@@ -38,7 +39,7 @@ public partial class LoginViewModel: BaseViewModel
 
         if (result.Authenticated)
         {
-            await Shell.Current.GoToAsync("//PersonListPage");
+            await Shell.Current.GoToAsync($"//{nameof(PersonListPage)}");
         }
         
         else
